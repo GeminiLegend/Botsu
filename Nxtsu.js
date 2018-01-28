@@ -32,22 +32,22 @@ bot.on('ready', function() {
 bot.on('message', message => {
 
     var userID = message.author.id
-    if(message.author.id === '356175367200833548'){
-        console.log(message.content);
-        if (new RegExp(commands.join("|")).test(message.content)) {
-            message.channel.send("stfu fag");
-            return;            
-        }   
+    // if(message.author.id === '356175367200833548'){
+    //     console.log(message.content);
+    //     if (new RegExp(commands.join("|")).test(message.content)) {
+    //         message.channel.send("stfu fag");
+    //         return;            
+    //     }   
 
-    }
-    if(message.author.id === '305928414785961984'){
-        console.log(message.content);
-        if (new RegExp(commands.join("|")).test(message.content)) {
-            message.channel.send("stfu thot");
-            return;            
-        }   
+    // }
+    // if(message.author.id === '305928414785961984'){
+    //     console.log(message.content);
+    //     if (new RegExp(commands.join("|")).test(message.content)) {
+    //         message.channel.send("stfu thot");
+    //         return;            
+    //     }   
 
-    }
+    // }
 	if (message.content === "!salt") {
 		var randomSalt = saltArray[Math.floor(Math.random() * saltArray.length)];
         var file = new Discord.Attachment(randomSalt, "YESU.png");
@@ -148,52 +148,6 @@ bot.on('message', message => {
         message.channel.send(`${mention} ${rand}`);
     }
 });
-
-// bot.on('message', message =>{
-// 	if (/!+.+<@217447408676634624>/.test(message)){
-//         console.log('Metioned God');
-//         message.channel.send("Do not speak my name so lightly mortal!");
-// 	} else if (/!+.+gem/.test(message)) {
-//         message.channel.send("Do not speak my name so lightly mortal!");
-//     } else if (/!+.+Gem/.test(message)) {
-//         message.channel.send("Do not speak my name so lightly mortal!");
-//     } else if (/!+.+gemini/.test(message)) {
-//         message.channel.send("Do not speak my name so lightly mortal!");
-//     }  else if (/!+.+maverick/.test(message)) {
-//         message.channel.send("Do not speak my name so lightly mortal!");
-//     }  else if (/!+.+marius/.test(message)) {
-//         message.channel.send("Do not speak my name so lightly mortal!");
-//     } else if (/!nudes/.test(message)) {
-//     	content = message.content;
-//     	mention = content.replace("!nudes", " ");
-//         message.channel.send(`${mention} Send Nudes`);
-//     } else if (message.content === "!leo") {
-//     	myArray = ['are you even in the party?','stfu you piece of shit','your mother never loved you','kys','your medals are shit'
-//     	,'the spawn hoes were more useful than you','faggot','my left nut is better at this game that you','no wonder your dad left you'
-//     	,'when are you going to kill yourself?','no one loves you','uninstall','you were a failed abortion','your life is trash just like your setup'
-//     	, "you're a waste of a sperm", 'your voice gives me cancer', 'i love you', "you're worse than michy's puns", "you look like a struck match", "you are subhuman trash"]
-//     	var rand = myArray[Math.floor(Math.random() * myArray.length)];
-//         message.channel.send(`<@!148688609715814400> ${rand}`);
-//     } else if (/!kys/.test(message)) {
-//     	content = message.content;
-//     	mention = content.replace("!kys", " ");
-//         message.channel.send(`${mention} kys`);
-//     } else if (/!strip/.test(message)) {
-//     	content = message.content;
-//     	mention = content.replace("!strip", " ");
-//         message.channel.send(`${mention} start stripping`);
-//     } else if (/!insult/.test(message)) {
-//         content = message.content;
-//         mention = content.replace("!insult", " ");
-//         myArray = ["i'm better than you", "you filthy casul","your lux is shit","go back to NA u skrub",
-//         "i’ll fuk u up", "fucking weeb", "nerd", "at least you tried", "your mother should've swallowed"];
-//         var rand = myArray[Math.floor(Math.random() * myArray.length)];
-//         message.channel.send(`${mention} ${rand}`);
-//     } 
-// });
-
-// 305928414785961984 davi
-// 356175367200833548 tj
 
 
 bot.login(token);
